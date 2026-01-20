@@ -1,0 +1,25 @@
+# Image Configurations
+image:
+  repository: redis
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+# Persistant Storage Configurations
+persistence:
+  enabled: true
+  size: 1Gi
+  accessMode: ReadWriteOnce
+
+# Service Configurations
+service:
+  type: ClusterIP
+  port: 6379
+
+# Resources-Pod Configurations
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
