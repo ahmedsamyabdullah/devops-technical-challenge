@@ -1,0 +1,13 @@
+image:
+  repository: simple-frontend
+  tag: v2
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort      
+  port: 80
+  nodePort: 30030  
+
+backend:
+  host: "my-backend-backend" 
+  port: 8080

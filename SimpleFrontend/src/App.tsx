@@ -12,7 +12,7 @@ function App() {
   const [data, setData] = useState<Data | null>(null);
   const [error, setError] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5220";
+  const API_URL = import.meta.env.VITE_API_URL || "/api";
 
   useEffect(() => {
     fetch(`${API_URL}/api/message`)
