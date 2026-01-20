@@ -48,9 +48,6 @@ helm upgrade --install my-frontend ./charts/frontend
 
 ### Step 4: Access the Application
 Run this command in separate terminal and minikube will open browser automatically:
-> [!NOTE]
-> Target port = 80 && NodePort = 30030
-> URL => http://<ip>:30030
 
 ```bash
 minikube service my-frontend-frontend
@@ -97,17 +94,19 @@ kubectl delete pod [REDIS_POD_NAME]
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
+```text
 .
-├── charts/                 # Helm Charts 
+├── charts/                 # Helm Charts
 │   ├── backend/            
 │   ├── frontend/           # React + Nginx Chart
 │   └── redis/              # Redis with Persistence Chart
 ├── SimpleBackend/          # .NET Source Code + Dockerfile
 ├── SimpleFrontend/         # React Source Code + Dockerfile
-├── .github/workflows/      # CI/CD Pipeline (Smart Trigger Logic)
+├── .github/workflows/      # CI/CD Pipeline
 
+```
 ---
 
 ## Feedback
